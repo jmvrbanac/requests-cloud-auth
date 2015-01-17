@@ -5,7 +5,7 @@ setup(
     version='0.0.1',
     description=(''),
     long_description=(''),
-    url='',
+    url='https://github.com/jmvrbanac/requests-cloud-auth',
     author='John Vrbanac',
     author_email='john.vrbanac@linux.com',
     license='Apache v2',
