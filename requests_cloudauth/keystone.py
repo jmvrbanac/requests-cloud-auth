@@ -1,14 +1,15 @@
 import json
 import requests
 
-from requests_cloudauth import RequestsCloudAuthBase, UnexpectedResponseCode
+from requests_cloudauth import RequestsCloudAuthBase
+from requests_cloudauth import UnexpectedResponseCode
 
 
 class KeystoneV2AuthBase(RequestsCloudAuthBase):
 
     def __init__(self, endpoint, username, tenant_name=None, password=None,
                  api_key=None):
-        """Base Authentication class for KeystoneV2 support"""
+        """Base Authentication class for KeystoneV2 support."""
         self.endpoint = '{base}/v2.0/tokens'.format(base=endpoint)
         self.username = username
         self.tenant_name = tenant_name
