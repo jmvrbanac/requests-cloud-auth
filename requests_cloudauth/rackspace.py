@@ -1,4 +1,4 @@
-from requests_cloud.keystone import KeystoneV2AuthBase
+from requests_cloudauth.keystone import KeystoneV2AuthBase
 
 US_ENDPOINT = 'https://identity.api.rackspacecloud.com'
 UK_ENDPOINT = 'https://lon.identity.api.rackspacecloud.com'

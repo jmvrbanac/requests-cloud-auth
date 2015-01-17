@@ -1,7 +1,7 @@
 import json
 import requests
 
-from requests_cloud import RequestsCloudAuthBase, UnexpectedResponseCode
+from requests_cloudauth import RequestsCloudAuthBase, UnexpectedResponseCode
 
 
 class KeystoneV2AuthBase(RequestsCloudAuthBase):
