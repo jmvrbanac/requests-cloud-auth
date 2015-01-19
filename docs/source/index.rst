@@ -1,16 +1,31 @@
-.. Requests-CloudAuth documentation master file, created by
-   sphinx-quickstart on Sun Jan 18 23:19:18 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 Welcome to Requests-CloudAuth's documentation!
 ==============================================
 
-Contents:
+Requests-CloudAuth is a collection of Authenication extensions for
+the Requests library. The primary purpose of this collection is to
+provide an easy interface to authenticate to cloud providers with
+minimal dependencies.
+
+Supported
+----------
+
+* Keystone v2
+* Rackspace Identity
+* Keystone v3 - **Future**
+* HP Cloud - **Future**
+* Digital Ocean - **Future**
+* AWS - **Future**
+
+Documentation
+--------------
 
 .. toctree::
    :maxdepth: 2
 
+
+Project Links
+---------------
+GitHub: `jmvrbanac/requests-cloud-auth <https://github.com/jmvrbanac/requests-cloud-auth>`_
 
 
 Indices and tables
