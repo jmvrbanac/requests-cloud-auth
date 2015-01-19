@@ -1,2 +1,4 @@
 specter
 flake8
+mock
+pretend
