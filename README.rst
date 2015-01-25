@@ -1,7 +1,7 @@
 Requests-CloudAuth
 ====================
 
-Requests-CloudAuth is a collection of Authenication extensions for
+Requests-CloudAuth is a collection of Authentication extensions for
 the Requests library. The primary purpose of this collection is to
 provide an easy interface to authenticate to cloud providers with
 minimal dependencies.
