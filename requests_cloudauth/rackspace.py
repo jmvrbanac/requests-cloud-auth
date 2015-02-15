@@ -8,6 +8,17 @@ class RackspacePasswordAuth(KeystoneV2AuthBase):
 
     def __init__(self, username, password, endpoint=None,
                  region='US'):
+        """Authentication extension for Requests that supports Rackspace
+           password authentication.
+
+        :param username: Valid Rackspace Cloud username
+        :param password: Valid Rackspace Cloud password
+        :param endpoint: (optional) URI to override authentication endpoint
+        :param region: (optional) Specify the Rackspace Cloud region.
+            Supported values: US, UK
+
+        :return: Instance of RackspacePasswordAuth
+        """
         if not endpoint:
             endpoint = UK_ENDPOINT if region.lower() == 'uk' else US_ENDPOINT
 
@@ -33,6 +44,17 @@ class RackspaceApiKeyAuth(KeystoneV2AuthBase):
 
     def __init__(self, username, api_key, endpoint=None,
                  region='US'):
+        """Authentication extension for Requests that supports Rackspace
+           API key authentication.
+
+        :param username: Valid Rackspace Cloud username
+        :param api_key: Valid Rackspace Cloud API key
+        :param endpoint: (optional) URI to override authentication endpoint
+        :param region: (optional) Specify the Rackspace Cloud region.
+            Supported values: US, UK
+
+        :return: Instance of RackspaceApiKeyAuth
+        """
         if not endpoint:
             endpoint = UK_ENDPOINT if region.lower() == 'uk' else US_ENDPOINT
 
