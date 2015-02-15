@@ -18,3 +18,7 @@ Supported
 
 Project Links
 ---------------
+
+Documentation: `ReadTheDocs <http://requests-cloud-auth.readthedocs.org/en/latest/>`_
+GitHub: `jmvrbanac/requests-cloud-auth <https://github.com/jmvrbanac/requests-cloud-auth>`_
+

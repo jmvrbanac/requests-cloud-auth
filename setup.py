@@ -1,10 +1,14 @@
 from setuptools import setup, find_packages
 
+desc = ''
+with open('README.rst') as f:
+    desc = f.read()
+
 setup(
     name='requests-cloudauth',
     version='0.0.1',
-    description=(''),
-    long_description=(''),
+    description=('A collection of authentication extensions for Requests'),
+    long_description=desc,
     url='https://github.com/jmvrbanac/requests-cloud-auth',
     author='John Vrbanac',
     author_email='john.vrbanac@linux.com',
