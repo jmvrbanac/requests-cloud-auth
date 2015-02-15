@@ -16,7 +16,7 @@ Sample Usage
         password='my_pass'
     )
 
-    # Pre-auth as we need ou project_id to list our cloud servers
+    # Pre-auth as we need our project_id to list our cloud servers
     auth.authenticate()
     
     url = 'https://ord.servers.api.rackspacecloud.com/v2/{0}/servers'.format(auth.project_id)
