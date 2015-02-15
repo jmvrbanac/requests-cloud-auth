@@ -22,7 +22,7 @@ setup(
         'Programming Language :: Python :: 3.4',
     ],
 
-    keywords='',
+    keywords='requests authenication cloud keystone extensions',
     packages=find_packages(exclude=['contrib', 'docs', 'spec*']),
     install_requires=['requests>=2.4.1'],
     package_data={},
