@@ -20,8 +20,8 @@ Documentation
 --------------
 
 .. toctree::
-   :maxdepth: 2
 
+    keystone_v2
 
 Project Links
 ---------------

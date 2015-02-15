@@ -51,6 +51,12 @@ class KeystoneV2AuthBase(RequestsCloudAuthBase):
         raise NotImplementedError
 
     def authenticate(self):
+        """Gets authentication credentials
+
+        Attempts to use cached credentials before making a remote call.
+        Automatically called by requests when needed, but can be manually
+        called when needed.
+        """
         creds = self.stored_auth.get_credentials(self.project_id,
                                                  self.username)
         if not creds:
@@ -73,6 +79,19 @@ class KeystoneV2AuthBase(RequestsCloudAuthBase):
 class KeystoneV2PasswordAuth(KeystoneV2AuthBase):
 
     def __init__(self, endpoint, username, password, tenant_name):
+        """Authentication extension for Requests that supports Keystone V2
+
+        :param endpoint: Keystone endpoint URI to authenticate to
+        :param username: Valid Keystone username
+        :param password: Valid Keystone password
+        :param tenant_name: Valid Keystone tenant name
+        :returns: Instance of KeystoneV2PasswordAuth
+
+        :type endpoint: str
+        :type username: str
+        :type password: str
+        :type tenant_name: str
+        """
         super(KeystoneV2PasswordAuth, self).__init__(
             endpoint=endpoint,
             username=username,
