@@ -4,7 +4,9 @@ Keystone V2 Authentication Extension
 This authentication extension enables simple authentication to Keystone V2
 endpoints.
 
-Sample Usage::
+Sample Usage
+------------
+::
 
     import requests
     from requests_cloudauth import keystone
