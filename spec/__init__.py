@@ -1,3 +1,5 @@
+from json import dumps as dict_to_str
+
 from pretend import stub
 
 
@@ -15,4 +17,8 @@ def get_auth_resp(code=200, json=None):
             }
         }
 
-    return stub(status_code=200, json=lambda: auth_dict)
+    return stub(
+        status_code=code,
+        json=lambda: auth_dict,
+        content=dict_to_str(auth_dict)
+    )

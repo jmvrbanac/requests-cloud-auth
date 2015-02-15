@@ -2,7 +2,8 @@ import json
 import requests
 
 from requests_cloudauth import RequestsCloudAuthBase
-from requests_cloudauth import UnexpectedResponseCode
+from requests_cloudauth import UnexpectedResponseCodeError
+from requests_cloudauth import FailedAuthenticationError
 
 
 class KeystoneV2AuthBase(RequestsCloudAuthBase):
@@ -35,12 +36,10 @@ class KeystoneV2AuthBase(RequestsCloudAuthBase):
                              data=auth_json_str,
                              headers=headers)
 
-        if resp.status_code != 200:
-            msg = 'Response Code: {code}, Body: {body}'.format(
-                code=resp.status_code,
-                body=resp.content
-            )
-            raise UnexpectedResponseCode(msg)
+        if resp.status_code == 401:
+            raise FailedAuthenticationError(resp)
+        elif resp.status_code != 200:
+            raise UnexpectedResponseCodeError(resp)
 
         token, tenant_id = self.parse(resp.json())
         self.token = token
@@ -49,7 +48,7 @@ class KeystoneV2AuthBase(RequestsCloudAuthBase):
         return token, tenant_id
 
     def get_token(self):
-        raise NotImplemented()
+        raise NotImplementedError
 
     def authenticate(self):
         creds = self.stored_auth.get_credentials(self.tenant_name,

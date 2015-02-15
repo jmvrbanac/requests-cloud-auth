@@ -38,5 +38,16 @@ class RequestsCloudAuthBase(AuthBase):
         return STORED_AUTHENTICATION
 
 
-class UnexpectedResponseCode(Exception):
-        pass
+class UnexpectedResponseCodeError(Exception):
+    def __init__(self, resp):
+        msg = 'Response Code: {code}, Body: {body}'.format(
+            code=resp.status_code,
+            body=resp.content
+        )
+        super(UnexpectedResponseCodeError, self).__init__(msg)
+
+
+class FailedAuthenticationError(Exception):
+    def __init__(self, resp):
+        msg = 'Could not authenticate: {0}'.format(resp.content)
+        super(FailedAuthenticationError, self).__init__(msg)
