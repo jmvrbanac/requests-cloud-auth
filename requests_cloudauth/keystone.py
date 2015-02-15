@@ -51,13 +51,13 @@ class KeystoneV2AuthBase(RequestsCloudAuthBase):
         raise NotImplementedError
 
     def authenticate(self):
-        creds = self.stored_auth.get_credentials(self.tenant_name,
+        creds = self.stored_auth.get_credentials(self.project_id,
                                                  self.username)
         if not creds:
             self.get_token()
             data = {'token': self.token, 'project_id': self.project_id}
             creds = self.stored_auth.set_credentials(
-                self.tenant_name, self.username, data)
+                self.project_id, self.username, data)
 
         return creds
 
