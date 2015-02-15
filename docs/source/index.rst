@@ -1,6 +1,12 @@
 Welcome to Requests-CloudAuth's documentation!
 ==============================================
 
+.. image:: https://codecov.io/github/jmvrbanac/requests-cloud-auth/coverage.svg?branch=master
+    :target: https://codecov.io/github/jmvrbanac/requests-cloud-auth?branch=master
+
+.. image:: https://travis-ci.org/jmvrbanac/requests-cloud-auth.svg?branch=master
+    :target: https://travis-ci.org/jmvrbanac/requests-cloud-auth
+
 Requests-CloudAuth is a collection of Authentication extensions for
 the Requests library. The primary purpose of this collection is to
 provide an easy interface to authenticate to cloud providers with
