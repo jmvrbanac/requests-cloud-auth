@@ -9,7 +9,7 @@ Sample Usage
 ::
 
     import requests
-    from requests_cloudauth import rackspace
+    from requests_cloud_auth import rackspace
     
     auth = rackspace.RackspacePasswordAuth(
         username='my_user',
@@ -26,8 +26,8 @@ Sample Usage
 Extension API Documentation
 ---------------------------
 
-.. autoclass:: requests_cloudauth.rackspace.RackspacePasswordAuth
+.. autoclass:: requests_cloud_auth.rackspace.RackspacePasswordAuth
     :inherited-members:
 
-.. autoclass:: requests_cloudauth.rackspace.RackspaceApiKeyAuth
+.. autoclass:: requests_cloud_auth.rackspace.RackspaceApiKeyAuth
     :inherited-members:

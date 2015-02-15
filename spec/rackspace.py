@@ -1,7 +1,7 @@
 from mock import patch
 from specter import Spec, expect
 
-from requests_cloudauth import rackspace
+from requests_cloud_auth import rackspace
 from spec import get_auth_resp
 
 

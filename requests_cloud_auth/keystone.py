@@ -1,9 +1,9 @@
 import json
 import requests
 
-from requests_cloudauth import RequestsCloudAuthBase
-from requests_cloudauth import UnexpectedResponseCodeError
-from requests_cloudauth import FailedAuthenticationError
+from requests_cloud_auth import RequestsCloudAuthBase
+from requests_cloud_auth import UnexpectedResponseCodeError
+from requests_cloud_auth import FailedAuthenticationError
 
 
 class KeystoneV2AuthBase(RequestsCloudAuthBase):

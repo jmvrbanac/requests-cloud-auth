@@ -1,6 +1,6 @@
 [run]
 branch = True
-source = requests_cloudauth/
+source = requests_cloud_auth/
 omit = setup.py,*egg*,.tox/*,spec/*
 
 [report]

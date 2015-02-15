@@ -1,10 +1,10 @@
 from mock import patch
 from specter import Spec, expect
 
-from requests_cloudauth.keystone import KeystoneV2PasswordAuth
-from requests_cloudauth.keystone import KeystoneV2AuthBase
-from requests_cloudauth import FailedAuthenticationError
-from requests_cloudauth import UnexpectedResponseCodeError
+from requests_cloud_auth.keystone import KeystoneV2PasswordAuth
+from requests_cloud_auth.keystone import KeystoneV2AuthBase
+from requests_cloud_auth import FailedAuthenticationError
+from requests_cloud_auth import UnexpectedResponseCodeError
 from spec import get_auth_resp
 
 

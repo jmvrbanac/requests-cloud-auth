@@ -9,7 +9,7 @@ Sample Usage
 ::
 
     import requests
-    from requests_cloudauth import keystone
+    from requests_cloud_auth import keystone
 
     keystone_auth = keystone.KeystoneV2PasswordAuth(
         endpoint='https://a.keystone.server',
@@ -25,5 +25,5 @@ Sample Usage
 Extension API Documentation
 ---------------------------
 
-.. autoclass:: requests_cloudauth.keystone.KeystoneV2PasswordAuth
+.. autoclass:: requests_cloud_auth.keystone.KeystoneV2PasswordAuth
     :inherited-members:
