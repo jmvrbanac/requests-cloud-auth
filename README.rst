@@ -1,13 +1,16 @@
-Requests-CloudAuth
+Requests-Cloud-Auth
 ====================
-
-.. image:: https://codecov.io/github/jmvrbanac/requests-cloud-auth/coverage.svg?branch=master
-    :target: https://codecov.io/github/jmvrbanac/requests-cloud-auth?branch=master
 
 .. image:: https://travis-ci.org/jmvrbanac/requests-cloud-auth.svg?branch=master
     :target: https://travis-ci.org/jmvrbanac/requests-cloud-auth
 
-Requests-CloudAuth is a collection of Authentication extensions for
+.. image:: https://codecov.io/github/jmvrbanac/requests-cloud-auth/coverage.svg?branch=master
+    :target: https://codecov.io/github/jmvrbanac/requests-cloud-auth?branch=master
+
+.. image:: https://readthedocs.org/projects/requests-cloud-auth/badge/?version=latest
+    :target: https://readthedocs.org/projects/requests-cloud-auth/?badge=latest
+
+Requests-Cloud-Auth is a collection of Authentication extensions for
 the Requests library. The primary purpose of this collection is to
 provide an easy interface to authenticate to cloud providers with
 minimal dependencies.

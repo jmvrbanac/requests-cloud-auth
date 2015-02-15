@@ -49,7 +49,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Requests-CloudAuth'
+project = u'Requests-Cloud-Auth'
 copyright = u'2014-2015, John Vrbanac'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -183,7 +183,7 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Requests-CloudAuthdoc'
+htmlhelp_basename = 'Requests-Cloud-Authdoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -203,7 +203,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'Requests-CloudAuth.tex', u'Requests-CloudAuth Documentation',
+  ('index', 'Requests-Cloud-Auth.tex', u'Requests-Cloud-Auth Documentation',
    u'John Vrbanac', 'manual'),
 ]
 
@@ -233,7 +233,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'requests-cloudauth', u'Requests-CloudAuth Documentation',
+    ('index', 'requests-cloud-auth', u'Requests-Cloud-Auth Documentation',
      [u'John Vrbanac'], 1)
 ]
 
@@ -247,8 +247,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'Requests-CloudAuth', u'Requests-CloudAuth Documentation',
-   u'John Vrbanac', 'Requests-CloudAuth', 'One line description of project.',
+  ('index', 'Requests-Cloud-Auth', u'Requests-Cloud-Auth Documentation',
+   u'John Vrbanac', 'Requests-Cloud-Auth', 'One line description of project.',
    'Miscellaneous'),
 ]
 
