@@ -5,7 +5,7 @@ with open('README.rst') as f:
     desc = f.read()
 
 setup(
-    name='requests-cloudauth',
+    name='requests-cloud-auth',
     version='0.0.1',
     description=('A collection of authentication extensions for Requests'),
     long_description=desc,
