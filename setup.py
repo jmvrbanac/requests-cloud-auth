@@ -6,7 +6,7 @@ with open('README.rst') as f:
 
 setup(
     name='requests-cloud-auth',
-    version='0.0.1',
+    version='0.0.2',
     description=('A collection of authentication extensions for Requests'),
     long_description=desc,
     url='https://github.com/jmvrbanac/requests-cloud-auth',
