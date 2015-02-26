@@ -20,7 +20,7 @@ Supported
 
 * Keystone v2
 * Rackspace Identity
-* Keystone v3 - **Future**
+* Keystone v3
 * HP Cloud - **Future**
 * Digital Ocean - **Future**
 * AWS - **Future**

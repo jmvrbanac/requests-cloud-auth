@@ -110,3 +110,107 @@ class KeystoneV2PasswordAuth(KeystoneV2AuthBase):
             }
         }
         return self.get_token_from_request_body(body)
+
+
+class KeystoneV3PasswordAuth(RequestsCloudAuthBase):
+
+    def __init__(self, endpoint, username, password, project_name):
+        """Authentication extension for Requests that supports Keystone V3
+
+        :param endpoint: Keystone endpoint URI to authenticate to
+        :param username: Valid Keystone username
+        :param password: Valid Keystone password
+        :param project_name: Valid Keystone project name
+        :returns: Instance of KeystoneV3PasswordAuth
+
+        :type endpoint: str
+        :type username: str
+        :type password: str
+        :type project_name: str
+        """
+        self.endpoint = '{base}/v3/auth/tokens'.format(base=endpoint)
+        self.username = username
+        self.project_name = project_name
+        self.password = password
+        self.project_id = None
+        self.token = None
+
+    def get_token(self):
+        body = {
+            "auth": {
+                "identity": {
+                    "methods": [
+                        "password"
+                    ],
+                    "password": {
+                        "user": {
+                            "domain": {
+                                "id": "default"
+                            },
+                            "name": self.username,
+                            "password": self.password
+                        }
+                    }
+                },
+                "scope": {
+                    "project": {
+                        "domain": {
+                            "id": "default"
+                        },
+                        "name": self.project_name
+                    }
+                }
+            }
+        }
+        return self.get_token_from_request_body(body)
+
+    def get_project_id(self, response_dict):
+        token_dict = response_dict.get('token', {})
+        project_dict = token_dict.get('project', {})
+
+        return project_dict.get('id')
+
+    def get_token_from_request_body(self, request_body_dict):
+        headers = {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        }
+        auth_json_str = json.dumps(request_body_dict)
+        resp = requests.post(self.endpoint,
+                             data=auth_json_str,
+                             headers=headers)
+
+        if resp.status_code == 401:
+            raise FailedAuthenticationError(resp)
+        elif resp.status_code != 201:
+            raise UnexpectedResponseCodeError(resp)
+
+        self.token = resp.headers.get('X-Subject-Token')
+        self.project_id = self.get_project_id(resp.json())
+
+        return self.token, self.project_id
+
+    def authenticate(self):
+        """Gets authentication credentials
+
+        Attempts to use cached credentials before making a remote call.
+        Automatically called by requests when needed, but can be manually
+        called when needed.
+        """
+        creds = self.stored_auth.get_credentials(self.project_id,
+                                                 self.username)
+        if not creds:
+            self.get_token()
+            data = {'token': self.token, 'project_id': self.project_id}
+            creds = self.stored_auth.set_credentials(
+                self.project_id, self.username, data)
+
+        return creds
+
+    def __call__(self, r):
+        creds = self.authenticate()
+
+        # modify and return the request
+        r.headers['X-Project-Id'] = creds.get('project_id')
+        r.headers['X-Auth-Token'] = creds.get('token')
+        return r
