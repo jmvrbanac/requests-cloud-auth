@@ -4,8 +4,9 @@ Welcome to Requests-Cloud-Auth's documentation!
 .. image:: https://travis-ci.org/jmvrbanac/requests-cloud-auth.svg?branch=master
     :target: https://travis-ci.org/jmvrbanac/requests-cloud-auth
 
-.. image:: https://codecov.io/github/jmvrbanac/requests-cloud-auth/coverage.svg?branch=master
-    :target: https://codecov.io/github/jmvrbanac/requests-cloud-auth?branch=master
+.. image:: https://coveralls.io/repos/jmvrbanac/requests-cloud-auth/badge.svg?branch=master
+  :target: https://coveralls.io/r/jmvrbanac/requests-cloud-auth?branch=master
+
 
 Requests-Cloud-Auth is a collection of Authentication extensions for
 the Requests library. The primary purpose of this collection is to
@@ -17,7 +18,7 @@ Supported
 
 * Keystone v2
 * Rackspace Identity
-* Keystone v3 
+* Keystone v3
 * HP Cloud - **Future**
 * Digital Ocean - **Future**
 * AWS - **Future**
