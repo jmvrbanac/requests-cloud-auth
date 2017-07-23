@@ -23,7 +23,7 @@ setup(
     ],
 
     keywords='requests authenication cloud keystone extensions',
-    packages=find_packages(exclude=['contrib', 'docs', 'spec*']),
+    packages=find_packages(exclude=['contrib', 'docs']),
     install_requires=['requests>=2.4.1'],
     package_data={},
     data_files=[],
