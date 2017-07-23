@@ -13,11 +13,16 @@ matrix:
   - python: pypy
     env: TOXENV=pypy
 
+env:
+  global:
+    - secure: "VnYiA5M9xbowVuHPLAJUz9bBHOczXSRn+1Vms6j/l0zRM65wQdqbabja1SEC4Yj2MRuyfmcq3rxxXrciomq5lBOI6eG/h4OWCDGIdWOW4r36/5d48Wn7yQKPxC0N2WZeK1nwome3ROO2gFHyjWMTjw/8r9a6Vc9G0Ty+4VdOSFo="
+
 install:
-    - pip install tox codecov
+    - pip install tox codecov codeclimate-test-reporter
 
 script:
     - tox -e $TOXENV
 
 after_success:
     - codecov
+    - codeclimate-test-reporter
