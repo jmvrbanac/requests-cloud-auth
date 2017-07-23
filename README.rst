@@ -4,8 +4,8 @@ Requests-Cloud-Auth
 .. image:: https://travis-ci.org/jmvrbanac/requests-cloud-auth.svg?branch=master
     :target: https://travis-ci.org/jmvrbanac/requests-cloud-auth
 
-.. image:: https://coveralls.io/repos/jmvrbanac/requests-cloud-auth/badge.svg?branch=master
-  :target: https://coveralls.io/r/jmvrbanac/requests-cloud-auth?branch=master
+.. image:: https://codecov.io/gh/jmvrbanac/requests-cloud-auth/branch/master/graph/badge.svg
+  :target: https://codecov.io/gh/jmvrbanac/requests-cloud-auth
 
 .. image:: https://readthedocs.org/projects/requests-cloud-auth/badge/?version=latest
     :target: https://readthedocs.org/projects/requests-cloud-auth/?badge=latest
